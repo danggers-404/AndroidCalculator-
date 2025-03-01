@@ -1,1 +1,9 @@
+image: gitpod/workspace-full
 
+tasks:
+  - init: sudo apt update && sudo apt install -y openjdk-17-jdk gradle
+  - init: git clone https://github.com/android/android-studio.git && cd android-studio
+
+ports:
+  - port: 8080
+    onOpen: open-preview
